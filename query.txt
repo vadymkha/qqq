@@ -1,0 +1,13 @@
+--select Doctors.Name, Doctors.Premium+Doctors.Salary as totalZp from Doctors, Vacations
+--where Doctors.Id=Vacations.DoctorId and GETDATE() not between Vacations.StartDate and Vacations.EndDate
+
+--select Wards.Name from Wards, Departments where Wards.DepartmentId=Departments.Id and Departments.Name='onko'
+
+--select distinct Departments.Name from Departments, Donations, Sponsors where Departments.Id=Donations.DepartmentId and Donations.SponsorId= Sponsors.Id and Sponsors.Name='umbrella'
+--select Departments.Name, Sponsors.Name, Donations.Amount, Donations.Date from Departments, Donations, Sponsors where Departments.Id=Donations.DepartmentId and Donations.SponsorId= Sponsors.Id and Donations.Date> GETDATE()-30
+
+
+--alter table Departments add DoctorId int;
+--alter table Departments add foreign key ([DoctorId]) references Doctors(Id);
+
+--select Departments.Name, Doctors.Name from Doctors, Departments, Donations where Departments.DoctorId=Doctors.Id and Departments.Id=Donations.DepartmentId and Donations.Amount>2000
